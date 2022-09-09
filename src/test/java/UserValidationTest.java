@@ -31,7 +31,7 @@ public class UserValidationTest {
     @Test
     public void testPasswordValidate() {
         UserValidation user = new  UserValidation();
-        boolean check = user.passwordValidate("@molmane@74");
+        boolean check = user.passwordValidate("Amolmane@74");
         Assertions.assertSame(true, check);
     }
 }
