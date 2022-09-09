@@ -22,5 +22,11 @@ public class UserValidationTest {
         boolean check = user.email("abc.xyz@bl.co.in");
         Assertions.assertSame(true, check);
     }
+    @Test
+    public void testMobile() {
+        UserValidation user = new  UserValidation();
+        boolean check = user.mobileValidate("91 8830937474");
+        Assertions.assertSame(true, check);
+    }
 
 }

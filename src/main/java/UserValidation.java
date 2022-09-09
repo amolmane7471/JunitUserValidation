@@ -31,10 +31,21 @@ public class UserValidation {
         }
         return false;
     }
+    public static boolean mobileValidate(String mobile) {
+        String pattern = "^[0-9]{2}[\\s][0-9]{10}$";
+        Pattern p= Pattern.compile(pattern);
+        Matcher match = p.matcher(mobile);
+        if (match.matches()) {
+            return true;
+        }
+        return false;
+    }
         public static void main(String[] args) {
             System.out.println(firstName("Amol"));
             System.out.println(lastName("Mane"));
             System.out.println(email("abc.xyz@bl.co.in"));
+            System.out.println(mobileValidate("91 8830937474"));
+
         }
     }
 
