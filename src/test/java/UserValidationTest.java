@@ -23,10 +23,15 @@ public class UserValidationTest {
         Assertions.assertSame(true, check);
     }
     @Test
-    public void testMobile() {
+    public void testMobileValidate() {
         UserValidation user = new  UserValidation();
         boolean check = user.mobileValidate("91 8830937474");
         Assertions.assertSame(true, check);
     }
-
+    @Test
+    public void testPasswordValidate() {
+        UserValidation user = new  UserValidation();
+        boolean check = user.passwordValidate("@molmane@74");
+        Assertions.assertSame(true, check);
+    }
 }
