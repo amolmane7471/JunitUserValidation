@@ -40,12 +40,22 @@ public class UserValidation {
         }
         return false;
     }
-        public static void main(String[] args) {
+    public static boolean passwordValidate(String password) {
+        String pattern = "^[[a-zA-Z0-9]*[@!#$^&*?]*[a-zA-Z0-9]]{8,}+$";
+        Pattern p= Pattern.compile(pattern);
+        Matcher match = p.matcher(password);
+        if (match.matches()) {
+            return true;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
             System.out.println(firstName("Amol"));
             System.out.println(lastName("Mane"));
             System.out.println(email("abc.xyz@bl.co.in"));
             System.out.println(mobileValidate("91 8830937474"));
-
+            System.out.println(passwordValidate("@molmane@74"));
         }
     }
 
