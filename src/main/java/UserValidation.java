@@ -12,8 +12,18 @@ public class UserValidation {
             return false;
         }
 
+    public static boolean lastName(String lastName) {
+        String pattern = "^[A-Z]{1}[a-z]{2,}$";
+        Pattern lastN= Pattern.compile(pattern);
+        Matcher match = lastN.matcher(lastName);
+        if (match.matches()) {
+            return true;
+        }
+        return false;
+    }
         public static void main(String[] args) {
             System.out.println(firstName("Amol"));
+            System.out.println(lastName("Mane"));
         }
     }
 
